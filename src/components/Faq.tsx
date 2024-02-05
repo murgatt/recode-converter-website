@@ -16,8 +16,8 @@ export const Faq = () => {
         <AccordionItem value="codecs">
           <AccordionTrigger>What are the supported audio codecs?</AccordionTrigger>
           <AccordionContent>
-            Currently the supported audio codecs are: AAC, AC3 and EAC3. Want new codecs to be supported? Feel free to
-            request it.
+            Currently the supported audio codecs are: AAC, AC3, EAC3 and Opus. Want new codecs to be supported? Feel
+            free to request it.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="subtitle">
