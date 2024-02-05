@@ -37,7 +37,7 @@ export default async function HomePage() {
       <Faq />
       <footer className="py-4">
         <Button asChild size="icon" variant="ghost">
-          <a href="https://github.com/murgatt/recode-converter" target="_blank">
+          <a aria-label="GitHub" href="https://github.com/murgatt/recode-converter" target="_blank">
             <GithubIcon size="16" />
           </a>
         </Button>
