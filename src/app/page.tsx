@@ -15,7 +15,7 @@ export default async function HomePage() {
   return (
     <main className="flex flex-col items-center px-6 pt-16">
       <section className="flex flex-col items-center text-center gap-2">
-        <Image src="/icon.png" alt="Recode Converter logo" width={200} height={200} />
+        <Image className="m-4" src="/app-icon.png" alt="Recode Converter logo" width={160} height={160} />
         <h1 className="title-h1">Recode Converter</h1>
         <h2 className="title-h2">A simple, modern audio codec converter for video files</h2>
         <div className="flex items-center flex-wrap gap-2 justify-center my-4">
