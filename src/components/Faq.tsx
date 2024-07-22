@@ -59,8 +59,19 @@ export const Faq = () => {
           <AccordionTrigger>Why do I see a warning message when I try to install / run the app?</AccordionTrigger>
           <AccordionContent>
             Unfortunately, Recode Converter is not signed for now as certificates costs money. This is why your OS warns
-            you of the potential risks of installing an unsigned app (OS warnings can be easily bypassed). But
-            don&apos;t worry, installing Recode Converter is completely safe if you download it from here or the{' '}
+            you of the potential risks of installing an unsigned app (OS warnings can be easily bypassed:{' '}
+            <a
+              className="link"
+              href="https://disable-gatekeeper.github.io/#disabling-gatekeeper-for-one-application-only"
+              target="_blank"
+            >
+              Mac
+            </a>
+            {', '}
+            <a className="link" href="/bypass-windows-message.jpg" target="_blank">
+              Windows
+            </a>
+            ). But don&apos;t worry, installing Recode Converter is completely safe if you download it from here or the{' '}
             <a className="link" href="https://github.com/murgatt/recode-converter" target="_blank">
               GitHub repository
             </a>
