@@ -11,7 +11,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Install dependencies:
 
 ```bash
-pnpm dev
+pnpm i
 ```
 
 Run the development server:
