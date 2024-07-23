@@ -6,6 +6,7 @@ import { Faq } from '@/components/Faq';
 import { getDownloadUrl } from './get-download-url';
 import { FeatureList } from '@/components/FeatureList';
 import { LATEST_RELEASE_URL } from '@/app/constants';
+import { MacAppAlert } from '@/components/MacAppAlert';
 
 export default async function HomePage() {
   const headersList = headers();
@@ -14,6 +15,7 @@ export default async function HomePage() {
 
   return (
     <main className="flex flex-col items-center px-6 pt-16">
+      <MacAppAlert userAgent={userAgent} />
       <section className="flex flex-col items-center text-center gap-2">
         <Image src="/app-icon.png" alt="Recode Converter logo" width={200} height={200} />
         <h1 className="title-h1">Recode Converter</h1>
