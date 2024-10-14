@@ -21,7 +21,14 @@ export async function getDownloadUrl(userAgent: string | null) {
   }
   const { assets }: { assets: Array<{ browser_download_url: string; name: string }> } = await response.json();
   const platformExtension = getPlatformExtension(userAgent.toLowerCase());
-  const { browser_download_url } = assets.find(asset => asset.name.split('.').at(-1) === platformExtension) || {};
+  const assetList = assets.filter(asset => asset.name.split('.').at(-1) === platformExtension);
 
-  return browser_download_url || LATEST_RELEASE_URL;
+  switch (assetList.length) {
+    case 0:
+      return LATEST_RELEASE_URL;
+    case 1:
+      return assetList[0].browser_download_url;
+    default:
+      return assetList.map(asset => asset.browser_download_url);
+  }
 }
