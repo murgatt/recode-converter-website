@@ -7,6 +7,7 @@ import { getDownloadUrl } from './get-download-url';
 import { FeatureList } from '@/components/FeatureList';
 import { LATEST_RELEASE_URL } from '@/app/constants';
 import { MacAppAlert } from '@/components/MacAppAlert';
+import { DownloadButton } from '@/components/DownloadButton';
 
 export default async function HomePage() {
   const headersList = headers();
@@ -21,11 +22,7 @@ export default async function HomePage() {
         <h1 className="title-h1">Recode Converter</h1>
         <h2 className="title-h2">A simple, modern audio codec converter for video files</h2>
         <div className="flex items-center flex-wrap gap-2 justify-center my-4">
-          <Button asChild>
-            <a href={downloadUrl}>
-              <DownloadIcon size="16" /> Download
-            </a>
-          </Button>
+          <DownloadButton downloadUrl={downloadUrl} />
           <Button asChild variant="link">
             <a href={LATEST_RELEASE_URL} target="_blank">
               More download options
