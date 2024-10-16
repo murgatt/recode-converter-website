@@ -62,7 +62,7 @@ export const Faq = () => {
             you of the potential risks of installing an unsigned app (OS warnings can be easily bypassed:{' '}
             <a
               className="link"
-              href="https://disable-gatekeeper.github.io/#disabling-gatekeeper-for-one-application-only"
+              href="https://github.com/murgatt/recode-converter/wiki/How-to-open-Recode-Converter-app-on-macOS"
               target="_blank"
             >
               Mac
