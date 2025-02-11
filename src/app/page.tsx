@@ -10,7 +10,7 @@ import { MacAppAlert } from '@/components/MacAppAlert';
 import { DownloadButton } from '@/components/DownloadButton';
 
 export default async function HomePage() {
-  const headersList = headers();
+  const headersList = await headers();
   const userAgent = headersList.get('user-agent');
   const downloadUrl = await getDownloadUrl(userAgent);
 
