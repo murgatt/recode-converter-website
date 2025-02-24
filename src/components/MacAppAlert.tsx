@@ -15,17 +15,10 @@ export const MacAppAlert = ({ userAgent }: MacAppAlertProps) => {
   return (
     <Alert className="-mt-10 mb-6">
       <InfoIcon size="16" />
-      <AlertTitle>Mac users update</AlertTitle>
+      <AlertTitle>Mac users</AlertTitle>
       <AlertDescription>
         <p>
-          The issue preventing app launch on Mac (for both Intel & Silicon) is now fixed in the{' '}
-          <a className="link" href="https://github.com/murgatt/recode-converter/releases/tag/v2.0.9" target="_blank">
-            latest update
-          </a>
-          .
-        </p>
-        <p>
-          Note: You will likely need to{' '}
+          You will likely need to{' '}
           <a
             className="link"
             href="https://github.com/murgatt/recode-converter/wiki/How-to-open-Recode-Converter-app-on-macOS"
