@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 export const Faq = () => {
   return (
-    <section className="max-w-5xl w-full sm:px-4 md:px-9 pt-4 pb-16">
+    <section className="w-full max-w-5xl pt-4 pb-16 sm:px-4 md:px-9">
       <h3 className="w-full title-h3">FAQ</h3>
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="platform">

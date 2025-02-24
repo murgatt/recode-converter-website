@@ -13,9 +13,9 @@ import {
 
 export const FeatureList = () => {
   return (
-    <section className="max-w-5xl w-full sm:px-4 md:px-9 pt-4 pb-16">
+    <section className="w-full max-w-5xl pt-4 pb-16 sm:px-4 md:px-9">
       <h3 className="mb-4 w-full title-h3">Features</h3>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ul className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon={<AudioLinesIcon size="20" />}>Convert audio codecs</Feature>
         <Feature icon={<SubtitlesIcon size="20" />} isNew>
           Convert subtitle

@@ -17,11 +17,11 @@ export default async function HomePage() {
   return (
     <main className="flex flex-col items-center px-6 pt-16">
       <MacAppAlert userAgent={userAgent} />
-      <section className="flex flex-col items-center text-center gap-2">
+      <section className="flex flex-col items-center gap-2 text-center">
         <Image src="/app-icon.png" alt="Recode Converter logo" width={200} height={200} />
         <h1 className="title-h1">Recode Converter</h1>
         <h2 className="title-h2">A simple, modern audio codec converter for video files</h2>
-        <div className="flex items-center flex-wrap gap-2 justify-center my-4">
+        <div className="my-4 flex flex-wrap items-center justify-center gap-2">
           <DownloadButton downloadUrl={downloadUrl} />
           <Button asChild variant="link">
             <a href={LATEST_RELEASE_URL} target="_blank">
