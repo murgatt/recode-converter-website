@@ -1,4 +1,3 @@
-import { Feature } from './Feature';
 import {
   AudioLinesIcon,
   BellIcon,
@@ -10,6 +9,7 @@ import {
   SunMoonIcon,
   TerminalIcon,
 } from 'lucide-react';
+import { Feature } from './Feature';
 
 export const FeatureList = () => {
   return (

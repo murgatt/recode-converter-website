@@ -1,13 +1,13 @@
 import { GITHUB_API_URL, LATEST_RELEASE_URL } from './constants';
 
 function getPlatformExtension(userAgent: string) {
-  if (userAgent.match(/(mac|os x)/)) {
+  if (/(mac|os x)/.exec(userAgent)) {
     return 'dmg';
   }
-  if (userAgent.match(/windows/)) {
+  if (/windows/.exec(userAgent)) {
     return 'exe';
   }
-  if (userAgent.match(/linux/)) {
+  if (/linux/.exec(userAgent)) {
     return 'AppImage';
   }
 
@@ -19,7 +19,7 @@ export async function getDownloadUrl(userAgent: string | null) {
   if (!response.ok || !userAgent) {
     return LATEST_RELEASE_URL;
   }
-  const { assets }: { assets: Array<{ browser_download_url: string; name: string }> } = await response.json();
+  const { assets } = (await response.json()) as { assets: { browser_download_url: string; name: string }[] };
   const platformExtension = getPlatformExtension(userAgent.toLowerCase());
   const assetList = assets.filter(asset => asset.name.split('.').at(-1) === platformExtension);
 

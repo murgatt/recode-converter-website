@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import { Button } from '@/components/ui/Button';
-import { DownloadIcon, GithubIcon } from 'lucide-react';
+import { GithubIcon } from 'lucide-react';
 import { headers } from 'next/headers';
-import { Faq } from '@/components/Faq';
-import { getDownloadUrl } from './get-download-url';
-import { FeatureList } from '@/components/FeatureList';
+import Image from 'next/image';
 import { LATEST_RELEASE_URL } from '@/app/constants';
-import { MacAppAlert } from '@/components/MacAppAlert';
 import { DownloadButton } from '@/components/DownloadButton';
+import { Faq } from '@/components/Faq';
+import { FeatureList } from '@/components/FeatureList';
+import { MacAppAlert } from '@/components/MacAppAlert';
+import { Button } from '@/components/ui/Button';
+import { getDownloadUrl } from './get-download-url';
 
 export default async function HomePage() {
   const headersList = await headers();
@@ -18,7 +18,7 @@ export default async function HomePage() {
     <main className="flex flex-col items-center px-6 pt-16">
       <MacAppAlert userAgent={userAgent} />
       <section className="flex flex-col items-center gap-2 text-center">
-        <Image src="/app-icon.png" alt="Recode Converter logo" width={200} height={200} />
+        <Image alt="Recode Converter logo" height={200} src="/app-icon.png" width={200} />
         <h1 className="title-h1">Recode Converter</h1>
         <h2 className="title-h2">A simple, modern audio codec converter for video files</h2>
         <div className="my-4 flex flex-wrap items-center justify-center gap-2">
@@ -30,13 +30,14 @@ export default async function HomePage() {
           </Button>
         </div>
       </section>
-      <Image src="/app-light.png" alt="Recode Converter app" className="block dark:hidden" width="1024" height="700" />
-      <Image src="/app-dark.png" alt="Recode Converter app" className="hidden dark:block" width="1024" height="700" />
+      <Image alt="Recode Converter app" className="block dark:hidden" height="700" src="/app-light.png" width="1024" />
+      <Image alt="Recode Converter app" className="hidden dark:block" height="700" src="/app-dark.png" width="1024" />
       <FeatureList />
       <Faq />
       <footer className="py-4">
         <Button asChild size="icon" variant="ghost">
           <a aria-label="GitHub" href="https://github.com/murgatt/recode-converter" target="_blank">
+            {/* eslint-disable-next-line @typescript-eslint/no-deprecated */}
             <GithubIcon size="16" />
           </a>
         </Button>
