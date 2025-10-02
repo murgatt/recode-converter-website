@@ -4,7 +4,7 @@ export const Faq = () => {
   return (
     <section className="w-full max-w-5xl pt-4 pb-16 sm:px-4 md:px-9">
       <h3 className="w-full title-h3">FAQ</h3>
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion className="w-full" collapsible type="single">
         <AccordionItem value="platform">
           <AccordionTrigger>On which platform can I install Recode Converter?</AccordionTrigger>
           <AccordionContent>The supported OS are Windows, macOS and Linux.</AccordionContent>

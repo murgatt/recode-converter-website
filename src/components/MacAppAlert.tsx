@@ -6,7 +6,7 @@ type MacAppAlertProps = {
 };
 
 export const MacAppAlert = ({ userAgent }: MacAppAlertProps) => {
-  const isAlertVisible = userAgent && userAgent.toLowerCase().match(/(mac|os x)/);
+  const isAlertVisible = userAgent && (/(mac|os x)/.exec(userAgent.toLowerCase()));
 
   if (!isAlertVisible) {
     return null;
