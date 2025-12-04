@@ -6,7 +6,7 @@ type MacAppAlertProps = {
 };
 
 export const MacAppAlert = ({ userAgent }: MacAppAlertProps) => {
-  const isAlertVisible = userAgent && (/(mac|os x)/.exec(userAgent.toLowerCase()));
+  const isAlertVisible = userAgent && /(mac|os x)/.exec(userAgent.toLowerCase());
 
   if (!isAlertVisible) {
     return null;
@@ -22,6 +22,7 @@ export const MacAppAlert = ({ userAgent }: MacAppAlertProps) => {
           <a
             className="link"
             href="https://github.com/murgatt/recode-converter/wiki/How-to-open-Recode-Converter-app-on-macOS"
+            rel="noreferrer"
             target="_blank"
           >
             authorize the application

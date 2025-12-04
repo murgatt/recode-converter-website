@@ -24,7 +24,7 @@ export default async function HomePage() {
         <div className="my-4 flex flex-wrap items-center justify-center gap-2">
           <DownloadButton downloadUrl={downloadUrl} />
           <Button asChild variant="link">
-            <a href={LATEST_RELEASE_URL} target="_blank">
+            <a href={LATEST_RELEASE_URL} rel="noreferrer" target="_blank">
               More download options
             </a>
           </Button>
@@ -36,7 +36,7 @@ export default async function HomePage() {
       <Faq />
       <footer className="py-4">
         <Button asChild size="icon" variant="ghost">
-          <a aria-label="GitHub" href="https://github.com/murgatt/recode-converter" target="_blank">
+          <a aria-label="GitHub" href="https://github.com/murgatt/recode-converter" rel="noreferrer" target="_blank">
             {/* eslint-disable-next-line @typescript-eslint/no-deprecated */}
             <GithubIcon size="16" />
           </a>

@@ -31,7 +31,12 @@ export const Faq = () => {
           <AccordionTrigger>What should I do if I find a bug or if I have a suggestion?</AccordionTrigger>
           <AccordionContent>
             Don&apos;t be shy and open an issue on{' '}
-            <a className="link" href="https://github.com/murgatt/recode-converter/issues/new/choose" target="_blank">
+            <a
+              className="link"
+              href="https://github.com/murgatt/recode-converter/issues/new/choose"
+              rel="noreferrer"
+              target="_blank"
+            >
               GitHub
             </a>{' '}
             to let me know what is not working or to suggest a new feature. If you are a developer you can also
@@ -43,7 +48,12 @@ export const Faq = () => {
           <AccordionContent>
             Of course! Help is always welcome. Recode Converter is completely open source. More details can be found on
             the{' '}
-            <a className="link" href="https://github.com/murgatt/recode-converter#contributing" target="_blank">
+            <a
+              className="link"
+              href="https://github.com/murgatt/recode-converter#contributing"
+              rel="noreferrer"
+              target="_blank"
+            >
               GitHub repository
             </a>
             .
@@ -63,16 +73,17 @@ export const Faq = () => {
             <a
               className="link"
               href="https://github.com/murgatt/recode-converter/wiki/How-to-open-Recode-Converter-app-on-macOS"
+              rel="noreferrer"
               target="_blank"
             >
               Mac
             </a>
             {', '}
-            <a className="link" href="/bypass-windows-message.jpg" target="_blank">
+            <a className="link" href="/bypass-windows-message.jpg" rel="noreferrer" target="_blank">
               Windows
             </a>
             ). But don&apos;t worry, installing Recode Converter is completely safe if you download it from here or the{' '}
-            <a className="link" href="https://github.com/murgatt/recode-converter" target="_blank">
+            <a className="link" href="https://github.com/murgatt/recode-converter" rel="noreferrer" target="_blank">
               GitHub repository
             </a>
             .
