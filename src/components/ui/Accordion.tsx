@@ -1,19 +1,19 @@
 'use client';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
-import * as React from 'react';
 import { cn } from '@/lib/utils';
+import type { ComponentPropsWithRef } from 'react';
 
 const Accordion = AccordionPrimitive.Root;
 
-type AccordionItemProps = React.ComponentPropsWithRef<typeof AccordionPrimitive.Item>;
+type AccordionItemProps = ComponentPropsWithRef<typeof AccordionPrimitive.Item>;
 
 const AccordionItem = ({ className, ref, ...props }: AccordionItemProps) => (
   <AccordionPrimitive.Item className={cn('border-b', className)} ref={ref} {...props} />
 );
 AccordionItem.displayName = 'AccordionItem';
 
-type AccordionTriggerProps = React.ComponentPropsWithRef<typeof AccordionPrimitive.Trigger>;
+type AccordionTriggerProps = ComponentPropsWithRef<typeof AccordionPrimitive.Trigger>;
 
 const AccordionTrigger = ({ className, children, ref, ...props }: AccordionTriggerProps) => (
   <AccordionPrimitive.Header className="flex">
@@ -32,7 +32,7 @@ const AccordionTrigger = ({ className, children, ref, ...props }: AccordionTrigg
 );
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
-type AccordionContentProps = React.ComponentPropsWithRef<typeof AccordionPrimitive.Content>;
+type AccordionContentProps = ComponentPropsWithRef<typeof AccordionPrimitive.Content>;
 
 const AccordionContent = ({ className, children, ref, ...props }: AccordionContentProps) => (
   <AccordionPrimitive.Content

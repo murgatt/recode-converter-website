@@ -1,9 +1,9 @@
-import React from 'react';
 import { Badge } from '@/components/ui/Badge';
+import type { ReactNode } from 'react';
 
 type FeatureProps = {
-  children: React.ReactNode;
-  icon: React.ReactNode;
+  children: ReactNode;
+  icon: ReactNode;
   isNew?: boolean;
 };
 
